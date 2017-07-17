@@ -1,30 +1,28 @@
+import Controller.HealthController
+import Util.LocalDateSerializer
+import Util.LocalDateTimeSerializer
+import spark.Spark.*
 import com.google.gson.Gson
-import org.jetbrains.ktor.application.call
-import org.jetbrains.ktor.host.embeddedServer
-import org.jetbrains.ktor.http.ContentType
-import org.jetbrains.ktor.netty.Netty
-import org.jetbrains.ktor.response.header
-import org.jetbrains.ktor.response.respondText
-import org.jetbrains.ktor.routing.get
-import org.jetbrains.ktor.routing.routing
+import com.google.gson.GsonBuilder
+import java.time.LocalDate
+import java.time.LocalDateTime
+
+
+val gson: Gson = GsonBuilder()
+        .registerTypeAdapter(LocalDate::class.java, LocalDateSerializer())
+        .registerTypeAdapter(LocalDateTime::class.java, LocalDateTimeSerializer())
+        .create()
+
 
 fun main(args: Array<String>) {
-    embeddedServer(Netty, 8080) {
-        routing {
-            get("/api/ping/{count?}") {
-                var count: Int = Integer.valueOf(call.parameters["count"]?: "1")
-                if (count < 1) {
-                    count = 1
-                }
-                val obj = Array<Entry>(count, {i -> Entry("$i: Hello, World!")})
-                val gson = Gson()
-                val str = gson.toJson(obj)
-                call.response.header("Access-Control-Allow-Origin", "*")
-                call.respondText(str, ContentType.Application.Json)
+    port(8050)
+    get("/hello") { req, res -> "Hello World" }
 
-            }
-        }
-    }.start(wait = true)
+    path("v1/") {
+        get("health", HealthController)
+    }
 }
+
+//https://medium.com/@v.souhrada/build-rest-service-with-kotlin-spark-java-and-requery-part-1-1798844fdf04
 
 data class Entry(val message: String)
