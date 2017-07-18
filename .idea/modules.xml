@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/BackEnd.iml" filepath="$PROJECT_DIR$/.idea/modules/BackEnd.iml" group="BackEnd" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/BackEnd/BackEnd.iml" filepath="$PROJECT_DIR$/.idea/modules/BackEnd/BackEnd.iml" group="BackEnd" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/BackEnd/BackEnd_main.iml" filepath="$PROJECT_DIR$/.idea/modules/BackEnd/BackEnd_main.iml" group="BackEnd" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/BackEnd/BackEnd_test.iml" filepath="$PROJECT_DIR$/.idea/modules/BackEnd/BackEnd_test.iml" group="BackEnd" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/FrontEnd.iml" filepath="$PROJECT_DIR$/.idea/modules/FrontEnd.iml" group="FrontEnd" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/FrontEnd/FrontEnd.iml" filepath="$PROJECT_DIR$/.idea/modules/FrontEnd/FrontEnd.iml" group="FrontEnd" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/FrontEnd/FrontEnd_main.iml" filepath="$PROJECT_DIR$/.idea/modules/FrontEnd/FrontEnd_main.iml" group="FrontEnd" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/FrontEnd/FrontEnd_test.iml" filepath="$PROJECT_DIR$/.idea/modules/FrontEnd/FrontEnd_test.iml" group="FrontEnd" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Full.iml" filepath="$PROJECT_DIR$/.idea/modules/Full.iml" />

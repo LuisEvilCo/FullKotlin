@@ -5,7 +5,8 @@ buildscript {
     ext.spark_version = '2.5.5'
     ext.koolbelt_version = 'b117604'
     ext.kotlinlogin_version = '1.4.6'
-    ext.slf4j_version = '1.7.2'
+    ext.slf4j_version = '1.7.21'
+    ext.jsonevent_layout_version = '1.0'
 
     repositories {
         mavenCentral()
@@ -37,7 +38,10 @@ dependencies {
 
     //Logging
     compile "io.github.microutils:kotlin-logging:$kotlinlogin_version"
-    compile "org.slf4j:slf4j-simple:$slf4j_version"
+    compile group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.8.2'
+    compile group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.8.2'
+    compile group: 'org.slf4j', name: 'slf4j-log4j12', version: "$slf4j_version"
+    compile group: 'net.logstash.log4j', name: 'jsonevent-layout', version: "$jsonevent_layout_version"
 
     compile group: 'com.google.code.gson', name: 'gson', version: '2.3.1'
     testCompile group: 'junit', name: 'junit', version: '4.12'

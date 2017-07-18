@@ -1,11 +1,13 @@
 import Controller.HealthController
 import Util.LocalDateSerializer
 import Util.LocalDateTimeSerializer
-import spark.Spark.*
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import java.time.LocalDate
 import java.time.LocalDateTime
+import org.apache.log4j.BasicConfigurator
+import spark.Service
+import spark.Spark
 
 
 val gson: Gson = GsonBuilder()
@@ -15,12 +17,18 @@ val gson: Gson = GsonBuilder()
 
 
 fun main(args: Array<String>) {
-    port(8050)
-    get("/hello") { req, res -> "Hello World" }
+    BasicConfigurator.configure()
 
-    path("v1/") {
-        get("health", HealthController)
+    Service.ignite().apply {
+        Spark.port(8050)
+        Spark.get("/hello") { _, _ -> "Hello World" }
+
+        Spark.path("v1/") {
+            Spark.get("health", HealthController)
+        }
+
     }
+
 }
 
 //https://medium.com/@v.souhrada/build-rest-service-with-kotlin-spark-java-and-requery-part-1-1798844fdf04
