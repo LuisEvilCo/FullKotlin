@@ -31,6 +31,4 @@ fun main(args: Array<String>) {
 
 }
 
-//https://medium.com/@v.souhrada/build-rest-service-with-kotlin-spark-java-and-requery-part-1-1798844fdf04
-
 data class Entry(val message: String)
