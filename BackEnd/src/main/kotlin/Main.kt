@@ -1,6 +1,9 @@
+import Client.BarbellClient
 import Controller.HealthController
+import Dto.BarbellUser
 import Util.LocalDateSerializer
 import Util.LocalDateTimeSerializer
+import Util.prepare
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import java.time.LocalDate
@@ -26,6 +29,23 @@ fun main(args: Array<String>) {
         Spark.path("v1/") {
             Spark.get("health", HealthController)
         }
+
+        Spark.get("/user", { request, response ->
+            val user = BarbellUser(
+                    userName = "Username",
+                    password = "pass",
+                    email = "test@mail.com"
+            )
+            response.prepare(200, gson.toJson(user))
+        })
+
+        Spark.get("/fetchUser"){request, response ->
+
+            val user = BarbellClient.fetchUser("http://localhost:3000")
+
+            response.prepare(200, user.userName)
+        }
+
 
     }
 

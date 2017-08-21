@@ -19,6 +19,7 @@
           <option name="pluginClasspaths">
             <array />
           </option>
+          <option name="version" value="true" />
         </compilerArguments>
       </configuration>
     </facet>
@@ -33,7 +34,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-jre8:1.1.4" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-jre8:1.1.4-2" level="project" />
     <orderEntry type="library" name="Gradle: com.sparkjava:spark-core:2.5.5" level="project" />
     <orderEntry type="library" name="Gradle: com.github.kevinmost.koolbelt:core:b117604" level="project" />
     <orderEntry type="library" name="Gradle: io.github.microutils:kotlin-logging:1.4.6" level="project" />
@@ -44,8 +45,8 @@
     <orderEntry type="library" name="Gradle: com.google.code.gson:gson:2.3.1" level="project" />
     <orderEntry type="library" name="Gradle: com.squareup.okhttp3:logging-interceptor:3.6.0" level="project" />
     <orderEntry type="library" name="Gradle: com.squareup.okhttp3:okhttp:3.6.0" level="project" />
-    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-jre7:1.1.4" level="project" />
-    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.1.4" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-jre7:1.1.4-2" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.1.4-2" level="project" />
     <orderEntry type="library" name="Gradle: org.slf4j:slf4j-api:1.7.21" level="project" />
     <orderEntry type="library" name="Gradle: org.eclipse.jetty:jetty-webapp:9.3.6.v20151106" level="project" />
     <orderEntry type="library" name="Gradle: org.eclipse.jetty.websocket:websocket-server:9.3.6.v20151106" level="project" />
