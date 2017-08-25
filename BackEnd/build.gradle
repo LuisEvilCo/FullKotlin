@@ -8,6 +8,7 @@ buildscript {
     ext.slf4j_version = '1.7.21'
     ext.jsonevent_layout_version = '1.0'
     ext.okhttp3_version = '3.6.0'
+    ext.google_gson = '2.8.1'
 
     repositories {
         mavenCentral()
@@ -45,7 +46,7 @@ dependencies {
     compile group: 'net.logstash.log4j', name: 'jsonevent-layout', version: "$jsonevent_layout_version"
 
     //Gson
-    compile group: 'com.google.code.gson', name: 'gson', version: '2.3.1'
+    compile group: 'com.google.code.gson', name: 'gson', version: "$google_gson"
 
     //OkHttp3
     compile group: 'com.squareup.okhttp3', name: 'okhttp', version: "$okhttp3_version"
